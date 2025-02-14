@@ -24,7 +24,7 @@ We will discuss more as we start coding.
 For now let's install it !
 On your R console (bottom left pane in R studio) type in:
 ```{r}
-
+# we can make notes for class here
 install.packages("tidyverse")
 # hint enter
 
