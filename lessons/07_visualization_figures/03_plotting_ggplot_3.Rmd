@@ -19,10 +19,10 @@ library(dplyr)
 # Load data
 ```{r loading our RNAseq analysis data TPM & COUNTS}
 # load TPM RESULTS: 
-load("/scratch/Shares/rinnclass/MASTER_CLASS/lessons/06_Differential_expression_analyses/results/TPM_results/TPM_results.Rdata")
+load("/scratch/Shares/rinnclass/MASTER_CLASS/STUDENTS/fana6609/MASTER_CLASS/lessons/06_Differential_expression_analyses/results/TPM_results/TPM_results.Rdata")
 
 # laod DESEQ2 results
-load("/scratch/Shares/rinnclass/MASTER_CLASS/lessons/06_Differential_expression_analyses/results/counts_results_DESEQ/DESEQ_results.rdata")
+load("/scratch/Shares/rinnclass/MASTER_CLASS/STUDENTS/fana6609/MASTER_CLASS/lessons/06_Differential_expression_analyses/results/counts_results_DESEQ/DESEQ_results.rdata")
 ```
 
 # Summary of where we are at
@@ -51,6 +51,7 @@ Essentially we make as many figures as there are entries.
 genes <- c("Gm13698", "Gm13691", "Gm9045", "Pgk1-rs7", "Firre", "Neurod1")
 gene_values <- filtered_res_df %>%
   filter(gene_name %in% genes)
+# Just only 5 obs with 2 genes found (Pgk1-rs7 and Neurod1) in the filtered dataset
 
 # Now the plotting beings
 ggplot(gene_values, 
